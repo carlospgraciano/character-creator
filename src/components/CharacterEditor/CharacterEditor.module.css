@@ -1,12 +1,15 @@
+/* Mobile-first styles */
+
+/* Ensure any positioned element that can use a parent container as anchor, uses this element as anchor */
 .characterEditor {
+  position: relative;
   padding-top: 128px;
   padding-bottom: 64px;
 }
 
-.maxWidthWrapper {
-}
-
+/* Apply the design proportion of the header */
 .header {
+  max-width: 65%;
   padding-bottom: 64px;
 }
 
@@ -24,7 +27,57 @@
 }
 
 .characterWrapper {
+  min-width: 35%;
+  min-height: 500px;
 }
 
+/* On mobile, make the control panel container overflow and position it on top of the chracter wrapper */
 .controlColumn {
+  max-width: 100%;
+  display: flex;
+  gap: 0 10px;
+  margin-left: -32px;
+  margin-right: -32px;
+  overflow: auto;
+  position: absolute;
+  bottom: 250px;
+}
+
+/* Tablet + Desktop styles */
+@media (min-width: 768px) {
+  .characterEditor {
+    /* Resetting mobile properties */
+    position: static;
+  }
+  /* Ensure any positioned element that can use a parent container as anchor, uses this element as anchor */
+  .maxWidthWrapper {
+    position: relative;
+  }
+  .characterWrapper {
+    /* Resetting mobile properties */
+    position: fixed;
+    bottom: 35%;
+    right: 0;
+  }
+
+  .controlColumn {
+    max-width: 50%;
+    /* Resetting properties */
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: visible;
+    position: static;
+    bottom: 0;
+  }
+
+  /* Perspective element only needed on Desktop (based on README designs) */
+  .perspectiveDecoration {
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: hsl(195deg 20% 86%);
+  }
 }
