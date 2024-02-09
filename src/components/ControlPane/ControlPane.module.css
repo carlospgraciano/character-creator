@@ -10,11 +10,8 @@
     to deal with it yet!
   */
   margin-bottom: 32px;
-  white-space: nowrap;
-  /* Enable a scroll container if needed (happens in Mobile) */
-  overflow: auto;
-  /* Helps forcing the parent to have overflowing children in Mobile */
-  min-width: 300px;
+  /* Sets a limit so that children overflow in Mobile */
+  max-width: 82%;
 }
 
 .title {
@@ -28,4 +25,11 @@
   font-size: 0.875rem;
   font-weight: 400;
   color: hsl(0deg, 0%, 30%);
+}
+
+/* Tablet + Desktop styles */
+@media (min-width: 716px) {
+  .controlPane {
+    max-width: none;
+  }
 }

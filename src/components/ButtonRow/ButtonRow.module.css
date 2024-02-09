@@ -1,2 +1,10 @@
 .buttonRow {
+  /* Prevent line wrap to produce an overflow */
+  white-space: nowrap;
+  /* Enable a scroll container if needed (happens in Mobile) */
+  overflow: auto;
+  padding: 22px;
+  margin-left: -22px;
+  margin-right: -22px;
+  margin-bottom: -22px;
 }
