@@ -8,6 +8,8 @@ Desktop:
 
 <img alt="Desktop-sized screenshot of the character creation screen" src="./docs/mockup.png" style="width: 100%;" />
 
+<img alt="Screen recording, desktop final version" src="https://courses.joshwcomeau.com/cfj-mats/character-creator.gif" style="max-width: 100%" />
+
 For this workshop, we're only targeting desktops (although if you're so inclined, creating a mobile variant would make a great stretch goal!).
 
 > Protip: If you're reading this in VS Code, open the Command Palette (Cmd + Shift + P) and select “Markdown: Open Preview to the Side”. That way, you can see all the images in this document!
@@ -53,14 +55,10 @@ This project uses **CSS Modules**. CSS modules are ultimately very similar to va
 
 ```js
 /* Something.js */
-import styles from './Something.module.css';
+import styles from "./Something.module.css";
 
 function Something() {
-  return (
-    <div className={styles.wrapper}>
-      I'll be 500px wide!
-    </div>
-  );
+  return <div className={styles.wrapper}>I'll be 500px wide!</div>;
 }
 ```
 
