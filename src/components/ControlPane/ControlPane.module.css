@@ -10,6 +10,11 @@
     to deal with it yet!
   */
   margin-bottom: 32px;
+  white-space: nowrap;
+  /* Enable a scroll container if needed (happens in Mobile) */
+  overflow: auto;
+  /* Helps forcing the parent to have overflowing children in Mobile */
+  min-width: 300px;
 }
 
 .title {
